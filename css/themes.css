@@ -1,0 +1,127 @@
+/* css/themes.css */
+
+/* Light Theme Variables */
+[data-theme='light'] {
+    --dark-bg: #f4f7fc;
+    --dark-bg-gradient: linear-gradient(270deg, #e9eef6, #ffffff, #f0f3f8);
+    --primary-color: #007bff; /* Standard Blue */
+    --secondary-color: #6f42c1; /* Standard Purple */
+    --accent-color: #dc3545; /* Standard Red */
+    --text-color: #333333;
+    --text-color-darker: #555555;
+    --border-color: #d1d9e6;
+    --card-bg: #ffffff;
+    --primary-color-transparent: rgba(0, 123, 255, 0.1);
+}
+
+/* Light Theme Adjustments */
+[data-theme='light'] body {
+    animation: none; /* Turn off background gradient animation for light theme */
+}
+
+[data-theme='light'] body::before, 
+[data-theme='light'] body::after {
+    opacity: 0.1; /* Make stars very faint on light bg */
+}
+
+[data-theme='light'] h1, 
+[data-theme='light'] h2, 
+[data-theme='light'] h3, 
+[data-theme='light'] h4, 
+[data-theme='light'] h5, 
+[data-theme='light'] h6 {
+    color: #1a1a1a;
+    text-shadow: none;
+}
+
+[data-theme='light'] .floating-navbar {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='light'] .navbar-brand a {
+    color: #1a1a1a;
+}
+[data-theme='light'] .navbar-brand a:hover {
+    color: var(--primary-color);
+}
+
+[data-theme='light'] .nav-pill {
+    color: var(--text-color-darker);
+}
+[data-theme='light'] .nav-pill:hover {
+    color: var(--primary-color);
+    background: var(--primary-color-transparent);
+}
+[data-theme='light'] .nav-pill.active {
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+[data-theme='light'] .action-btn {
+    color: var(--text-color-darker);
+}
+
+[data-theme='light'] .hero-subtitle {
+    text-shadow: none;
+}
+[data-theme='light'] .btn-primary {
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+}
+[data-theme='light'] .btn-primary:hover {
+    color: white;
+}
+
+[data-theme='light'] .profile-image {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.4), inset 0 0 15px rgba(0, 123, 255, 0.2);
+}
+
+[data-theme='light'] .tech-stack i {
+    background: #e9eef6;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+[data-theme='light'] .tech-stack i:hover {
+    color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.4);
+}
+
+[data-theme='light'] .about-image img {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+[data-theme='light'] .detail-item,
+[data-theme='light'] .skills-category,
+[data-theme='light'] .project-card,
+[data-theme='light'] .timeline-content,
+[data-theme='light'] .contact-container,
+[data-theme='light'] .modal-content,
+[data-theme='light'] .chatbot-container,
+[data-theme='light'] .footer {
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+[data-theme='light'] .timeline-item:hover::after {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+[data-theme='light'] .form-group input, 
+[data-theme='light'] .form-group textarea {
+    background-color: #f8f9fa;
+}
+[data-theme='light'] .form-group input:focus, 
+[data-theme='light'] .form-group textarea:focus {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+[data-theme='light'] .chatbot-toggle {
+    color: white;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
+}
+
+[data-theme='light'] .chatbot-message.bot p {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+    color: #333;
+}
+[data-theme='light'] .chatbot-message.user p {
+    background: var(--primary-color);
+    color: white;
+}

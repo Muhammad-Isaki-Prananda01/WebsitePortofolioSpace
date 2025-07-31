@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Muhammad Isaki Prananda - TJKT SMK</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Navbar -->
+    <nav class="floating-navbar">
+        <div class="navbar-links">
+            <a href="#home" class="nav-pill active" data-translate="navHome"><i class="fas fa-home"></i> Home</a>
+            <a href="#about" class="nav-pill" data-translate="navAbout"><i class="fas fa-user"></i> Tentang Saya</a>
+            <a href="#skills" class="nav-pill" data-translate="navSkills"><i class="fas fa-code"></i> Keahlian</a>
+            <a href="#projects" class="nav-pill" data-translate="navProjects"><i class="fas fa-project-diagram"></i> Proyek</a>
+            <a href="#timeline" class="nav-pill" data-translate="navTimeline"><i class="fas fa-history"></i> Timeline</a>
+            <a href="#contact" class="nav-pill" data-translate="navContact"><i class="fas fa-envelope"></i> Kontak</a>
+        </div>
+        
+        <div class="navbar-actions">
+            <button id="language-switcher" class="action-btn" data-translate-title="langBtnTitle" title="Ubah Bahasa">
+                <i class="fas fa-language"></i>
+                <span class="language-text">ID</span>
+            </button>
+            <button id="theme-switcher" class="action-btn" data-translate-title="themeBtnTitle" title="Ubah Tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="login-btn" class="action-btn" data-translate-title="loginBtnTitle" title="Login">
+                <i class="fas fa-user"></i>
+            </button>
+            <div id="user-profile" class="user-profile hidden">
+                <img src="images/profile.jpg" alt="Profile" class="profile-pic">
+                <span class="username" data-translate="username">Guest</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section home-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Muhammad Isaki Prananda</h1>
+            <h2 class="hero-subtitle"><span data-translate="heroSubtitlePrefix">Pelajar TJKT | </span><span id="typing-text"></span></h2>
+            <p class="hero-description" data-translate="heroDescription">
+                Saya adalah pelajar SMK jurusan Teknik Komputer dan Jaringan yang sedang mendalami 
+                Cyber Security, Coding, Jaringan, Server, dan teknologi terkini. 
+                Saya bersemangat untuk terus belajar dan mengembangkan keterampilan di dunia IT.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary" data-translate="heroBtnProjects"><i class="fas fa-rocket"></i> Lihat Proyek Saya</a>
+                <a href="#contact" class="btn-secondary" data-translate="heroBtnContact"><i class="fas fa-paper-plane"></i> Hubungi Saya</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="tech-stack">
+                <i class="fab fa-python" data-translate-title="techStackPython" title="Python"></i>
+                <i class="fab fa-js" data-translate-title="techStackJS" title="JavaScript"></i>
+                <i class="fas fa-shield-alt" data-translate-title="techStackSecurity" title="Cyber Security"></i>
+                <i class="fas fa-network-wired" data-translate-title="techStackNetwork" title="Networking"></i>
+                <i class="fas fa-server" data-translate-title="techStackServer" title="Server"></i>
+                <i class="fab fa-linux" data-translate-title="techStackLinux" title="Linux"></i>
+            </div>
+            <img src="img/download.jpg" alt="Muhammad Isaki Prananda" class="profile-image">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <h2 class="section-title" data-translate="aboutTitle">Tentang Saya</h2>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="img/download.jpg" alt="Muhammad Isaki Prananda">
+            </div>
+            <div class="about-content">
+                <h3 data-translate="aboutSubTitle">Siapa Saya?</h3>
+                <p data-translate="aboutDescription">
+                    Saya Muhammad Isaki Prananda, seorang pelajar SMK jurusan Teknik Komputer dan Jaringan 
+                    yang penuh semangat dalam mempelajari teknologi informasi. Saya memiliki minat khusus 
+                    di bidang Cyber Security, pemrograman, dan administrasi jaringan.
+                </p>
+                
+                <div class="about-details">
+                    <div class="detail-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <div>
+                            <h4 data-translate="aboutEduTitle">Pendidikan</h4>
+                            <p data-translate="aboutEduDesc">SMK Jurusan Teknik Komputer dan Jaringan</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <div>
+                            <h4 data-translate="aboutInterestTitle">Minat</h4>
+                            <p data-translate="aboutInterestDesc">Cyber Security, Pemrograman, Jaringan, Server</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-translate="aboutLocationTitle">Lokasi</h4>
+                            <p data-translate="aboutLocationDesc">Malang, Jawa Timur, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-translate="aboutEmailTitle">Email</h4>
+                            <p>isaki.prananda@example.com</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-bullseye"></i>
+                        <div>
+                            <h4 data-translate="aboutCareerTitle">Tujuan Karir</h4>
+                            <p data-translate="aboutCareerDesc">Cyber Security Specialist, Network Engineer</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <div>
+                            <h4 data-translate="aboutHobbyTitle">Hobi</h4>
+                            <p data-translate="aboutHobbyDesc">Problem Solving, Belajar Teknologi Baru</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-buttons">
+                    <a href="#" class="btn-primary" id="download-cv" data-translate="aboutBtnCV"><i class="fas fa-download"></i> Download CV</a>
+                    <a href="#contact" class="btn-secondary" data-translate="aboutBtnContact"><i class="fas fa-paper-plane"></i> Hubungi Saya</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <h2 class="section-title" data-translate="skillsTitle">Keahlian</h2>
+        <div class="skills-container">
+            <!-- Kategori Cyber Security -->
+            <div class="skills-category">
+                <h3 data-translate="skillsCatSecurity"><i class="fas fa-shield-alt"></i> Cyber Security</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name" data-translate="skillNetworkSecurity">Keamanan Jaringan</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="80"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name" data-translate="skillVulnAssess">Vulnerability Assessment</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="70"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name" data-translate="skillPenTest">Penetration Testing (Web & Network)</span>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="65"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name" data-translate="skillMalware">Analisis Malware Dasar</span>
+                        <span class="skill-percent">55%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="55"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori Jaringan & Infrastruktur -->
+            <div class="skills-category">
+                <h3 data-translate="skillsCatNetwork"><i class="fas fa-network-wired"></i> Jaringan & Infrastruktur</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name" data-translate="skillRouterSwitch">Konfigurasi Router & Switch (MikroTik, Cisco)</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="85"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name" data-translate="skillLinuxAdmin">Administrasi Server Linux (Debian/Ubuntu)</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="80"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name" data-translate="skillNetworkProtocol">Protokol Jaringan (TCP/IP, DNS, DHCP)</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="90"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name" data-translate="skillVirtualization">Virtualisasi (Proxmox, Docker)</span>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="65"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kategori Pemrograman & Tools -->
+            <div class="skills-category">
+                <h3 data-translate="skillsCatProgramming"><i class="fas fa-code"></i> Pemrograman & Tools</h3>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name" data-translate="skillPython">Python (Scripting, Scapy)</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="80"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name" data-translate="skillBash">Bash Scripting</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="75"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name" data-translate="skillWebDev">HTML, CSS, JavaScript</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="70"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name" data-translate="skillSecTools">Security Tools (Nmap, Wireshark, Metasploit)</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-level="70"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills-chart-container">
+            <h3 class="subsection-title" data-translate="skillsChartTitle">Visualisasi Keahlian</h3>
+            <div class="charts-grid">
+                <div class="chart-wrapper">
+                    <canvas id="cyberSecurityChart"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="networkingChart"></canvas>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="programmingChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <h2 class="section-title" data-translate="projectsTitle">Proyek Saya</h2>
+        <div class="projects-container">
+            <!-- Project Card 1: Security Scanner -->
+            <div class="project-card">
+                <div class="project-card-inner">
+                    <div class="project-front">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x225?text=Security+Tool" alt="Security Tool">
+                        </div>
+                        <div class="project-title-front">
+                            <h3 data-translate="proj1Title">Security Scanner Tool</h3>
+                            <div class="project-tech-front">
+                                <i class="fab fa-python" title="Python"></i>
+                                <i class="fas fa-shield-alt" title="Cyber Security"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-back">
+                        <div class="project-content">
+                            <h3 data-translate="proj1Title">Security Scanner Tool</h3>
+                            <p data-translate="proj1Desc">Alat CLI untuk memindai kerentanan keamanan pada jaringan lokal menggunakan Python dan Scapy.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Cyber Security</span>
+                                <span class="tech-tag">Networking</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn-small" data-translate="proj1BtnCode"><i class="fab fa-github"></i> Kode</a>
+                                <a href="#" class="btn-small" data-translate="proj1BtnDemo"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Card 2: Network Monitor -->
+            <div class="project-card">
+                <div class="project-card-inner">
+                    <div class="project-front">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x225?text=Network+Monitor" alt="Network Monitor">
+                        </div>
+                        <div class="project-title-front">
+                            <h3 data-translate="proj2Title">Network Monitoring System</h3>
+                            <div class="project-tech-front">
+                                <i class="fab fa-js" title="JavaScript"></i>
+                                <i class="fas fa-server" title="Server"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-back">
+                        <div class="project-content">
+                            <h3 data-translate="proj2Title">Network Monitoring System</h3>
+                            <p data-translate="proj2Desc">Sistem untuk memantau status jaringan dan server berbasis web dengan notifikasi real-time.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Networking</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn-small" data-translate="proj1BtnCode"><i class="fab fa-github"></i> Kode</a>
+                                <a href="#" class="btn-small disabled"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Card 3: Web App -->
+            <div class="project-card">
+                <div class="project-card-inner">
+                    <div class="project-front">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/400x225?text=Web+App" alt="Web App">
+                        </div>
+                        <div class="project-title-front">
+                            <h3>Aplikasi Manajemen TKJ</h3>
+                            <div class="project-tech-front">
+                                <i class="fab fa-php" title="PHP"></i>
+                                <i class="fas fa-database" title="MySQL"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-back">
+                        <div class="project-content">
+                            <h3>Aplikasi Manajemen TKJ</h3>
+                            <p>Aplikasi web untuk membantu manajemen praktikum dan inventaris lab Teknik Komputer dan Jaringan.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML/CSS</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn-small"><i class="fab fa-github"></i> Kode</a>
+                                <a href="#" class="btn-small"><i class="fas fa-external-link-alt"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-footer">
+            <a href="#" class="btn-primary"><i class="fas fa-layer-group"></i> Lihat Semua Proyek</a>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section timeline-section">
+        <h2 class="section-title">Timeline Pendidikan</h2>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-date">2022 - Sekarang</div>
+                <div class="timeline-content">
+                    <h3><i class="fas fa-school"></i> SMK Jurusan TJKT</h3>
+                    <p>Mempelajari dasar-dasar jaringan komputer, keamanan jaringan, pemrograman, dan administrasi server.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2021</div>
+                <div class="timeline-content">
+                    <h3><i class="fas fa-shield-alt"></i> Pelatihan Dasar Cyber Security</h3>
+                    <p>Mengikuti pelatihan online tentang dasar-dasar keamanan siber dan ethical hacking.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2020</div>
+                <div class="timeline-content">
+                    <h3><i class="fas fa-laptop-code"></i> Belajar Pemrograman Mandiri</h3>
+                    <p>Mulai mempelajari bahasa pemrograman Python dan JavaScript secara otodidak.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2019</div>
+                <div class="timeline-content">
+                    <h3><i class="fas fa-graduation-cap"></i> Lulus SMP</h3>
+                    <p>Lulus dari Sekolah Menengah Pertama dengan minat awal di bidang teknologi informasi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <h2 class="section-title">Hubungi Saya</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Informasi Kontak</h3>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>isaki.prananda@example.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Telepon</h4>
+                        <p>+62 812 3456 7890</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Lokasi</h4>
+                        <p>Malang, Jawa Timur, Indonesia</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Kirim Pesan</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Nama Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder="Subjek">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Pesan Anda" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-content auth-card">
+            <span class="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+                <div class="auth-links">
+                    <a href="#register-modal" id="show-register">Buat Akun Baru</a>
+                    <a href="#reset-modal" id="show-reset">Lupa Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="modal hidden">
+        <div class="modal-content auth-card">
+            <span class="close-modal">&times;</span>
+            <h2>Daftar Akun</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Nama Lengkap</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm">Konfirmasi Password</label>
+                    <input type="password" id="register-confirm" required>
+                </div>
+                <button type="submit" class="btn-primary">Daftar</button>
+                <div class="auth-links">
+                    <a href="#login-modal" id="show-login">Sudah punya akun? Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Reset Password Modal -->
+    <div id="reset-modal" class="modal hidden">
+        <div class="modal-content auth-card">
+            <span class="close-modal">&times;</span>
+            <h2>Reset Password</h2>
+            <form id="reset-form">
+                <div class="form-group">
+                    <label for="reset-email">Email</label>
+                    <input type="email" id="reset-email" required>
+                </div>
+                <button type="submit" class="btn-primary">Kirim Link Reset</button>
+                <div class="auth-links">
+                    <a href="#login-modal" id="show-login-from-reset">Kembali ke Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <h3>AI Assistant</h3>
+            <button id="minimize-chatbot"><i class="fas fa-minus"></i></button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <div class="chatbot-message bot">
+                <p>Halo! Saya AI Assistant. Ada yang bisa saya bantu tentang Teknik Komputer dan Jaringan atau Cyber Security?</p>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input" placeholder="Ketik pesan...">
+            <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <button id="open-chatbot" class="chatbot-toggle">
+        <i class="fas fa-robot"></i>
+    </button>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" title="Kembali ke Atas">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Tentang Saya</h3>
+                <p>Muhammad Isaki Prananda adalah pelajar SMK jurusan Teknik Komputer dan Jaringan yang bersemangat dalam mempelajari Cyber Security, Pemrograman, dan Jaringan Komputer.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Link Cepat</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Tentang Saya</a></li>
+                    <li><a href="#skills">Keahlian</a></li>
+                    <li><a href="#projects">Proyek</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Informasi Kontak</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i><span>Malang, Jawa Timur, Indonesia</span></li>
+                    <li><i class="fas fa-envelope"></i><span>isaki.prananda@example.com</span></li>
+                    <li><i class="fas fa-phone"></i><span>+62 812 3456 7890</span></li>
+                    <li class="time-divider"></li>
+                    <li class="time-zone-item">
+                        <i class="fas fa-clock"></i>
+                        <span>WIB</span>
+                        <span id="time-wib" class="time-display">00:00:00</span>
+                    </li>
+                    <li class="time-zone-item">
+                        <i class="fas fa-clock"></i>
+                        <span>WITA</span>
+                        <span id="time-wita" class="time-display">00:00:00</span>
+                    </li>
+                    <li class="time-zone-item">
+                        <i class="fas fa-clock"></i>
+                        <span>WIT</span>
+                        <span id="time-wit" class="time-display">00:00:00</span>
+                    </li>
+                    <li class="time-zone-item">
+                        <i class="fas fa-globe"></i>
+                        <span>UTC</span>
+                        <span id="time-utc" class="time-display">00:00:00</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Lokasi</h3>
+                <div class="footer-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.3141822078896!2d112.60827644979209!3d-7.966446794234785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7882865ded0697%3A0xa77fa961a7c4e4b7!2sMalang%2C%20Kota%20Malang%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1621234567890!5m2!1sid!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-copyright">
+                    &copy; <span id="current-year"></span> Muhammad Isaki Prananda. Semua Hak Dilindungi.
+                </div>
+                <div class="footer-legal">
+                    <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
+                    <a href="syarat-ketentuan.html">Syarat & Ketentuan</a>
+                    <a href="peta-situs.html">Peta Situs</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/typing-effect.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
