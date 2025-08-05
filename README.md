@@ -5,7 +5,7 @@
   <p><b>Sebuah portofolio web interaktif yang menampilkan keahlian di bidang Cyber Security, Jaringan, dan Pengembangan Web.</b></p>
   
   <p>
-    <a href="https://isakidev.my.id"><strong>✨ Lihat Live Demo »</strong></a>
+    <a href="https://websiteportofolioisaki.vercel.app/"><strong>✨ Lihat Live Demo »</strong></a>
     ·
     <a href="https://github.com/Isaki-Prananda/Portofolio-Isaki-Prananda/issues">Laporkan Bug</a>
     ·
