@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Isaki-Prananda/Portofolio-Isaki-Prananda/main/assets/img/screenshot.png" alt="Project Banner" width="800"/>
+  <img src="img/image_2025-08-05_225830488.png" alt="Project Banner" width="800"/>
   <br/>
   <h1><b>Portofolio Pribadi - Muhammad Isaki Prananda</b></h1>
   <p><b>Sebuah portofolio web interaktif yang menampilkan keahlian di bidang Cyber Security, Jaringan, dan Pengembangan Web.</b></p>
