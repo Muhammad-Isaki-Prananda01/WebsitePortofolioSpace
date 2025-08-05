@@ -1,0 +1,141 @@
+/* 
+    ============================================
+    CSS for Legal Pages (Privacy, Terms, Sitemap)
+    ============================================
+*/
+
+/* --- Base Styles --- */
+body {
+    font-family: var(--font-primary, 'Poppins', sans-serif);
+    line-height: 1.8;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: 100vh;
+    padding: 4rem 1rem;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Container for the content --- */
+.legal-container {
+    max-width: 850px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 3.5rem;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3), 0 0 25px rgba(var(--primary-rgb), 0.2);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+/* --- Headings --- */
+.legal-container h1 {
+    font-family: var(--font-headings, 'Orbitron', sans-serif);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(var(--primary-rgb), 0.5);
+}
+
+.legal-container .last-updated {
+    text-align: center;
+    display: block;
+    margin-bottom: 3rem;
+    color: var(--text-color-darker);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.legal-container h2 {
+    font-family: var(--font-headings, 'Orbitron', sans-serif);
+    color: var(--primary-color);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+    font-size: 1.8rem;
+}
+
+.legal-container h3 {
+    font-family: var(--font-headings, 'Orbitron', sans-serif);
+    color: var(--text-color);
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+/* --- Text and Links --- */
+.legal-container p {
+    margin-bottom: 1.2rem;
+    color: var(--text-color-darker);
+}
+
+.legal-container a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px dashed var(--primary-color-transparent);
+    transition: all 0.3s ease;
+}
+
+.legal-container a:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+    text-shadow: 0 0 8px var(--accent-color);
+}
+
+/* --- Lists --- */
+.legal-container ul, .legal-container ol {
+    padding-left: 25px;
+    margin-bottom: 1.2rem;
+    color: var(--text-color-darker);
+}
+
+.legal-container li {
+    margin-bottom: 0.8rem;
+}
+
+/* --- Back Button --- */
+.back-to-home {
+    display: inline-block;
+    margin-top: 3rem;
+    text-align: center;
+    width: 100%;
+    font-family: var(--font-headings, 'Orbitron', sans-serif);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 12px 25px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    color: var(--secondary-color);
+}
+
+.back-to-home:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    box-shadow: 0 0 15px var(--secondary-color);
+    border-bottom-color: var(--secondary-color); /* Override link hover */
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    body {
+        padding: 2rem 0.5rem;
+    }
+    .legal-container {
+        padding: 2rem 1.5rem;
+    }
+    .legal-container h1 {
+        font-size: 2.2rem;
+    }
+    .legal-container h2 {
+        font-size: 1.5rem;
+    }
+}

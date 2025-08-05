@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --- Active Navbar Link on Scroll ---
-    const navPills = document.querySelectorAll('.nav-pill');
+    const navLinks = document.querySelectorAll('.nav-link');
     
     const navObserverOptions = {
         root: null,
@@ -51,10 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const id = entry.target.getAttribute('id');
-                navPills.forEach(pill => {
-                    pill.classList.remove('active');
-                    if (pill.getAttribute('href') === `#${id}`) {
-                        pill.classList.add('active');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.add('active');
                     }
                 });
             }

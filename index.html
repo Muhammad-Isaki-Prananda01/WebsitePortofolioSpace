@@ -8,128 +8,126 @@
     <link rel="stylesheet" href="css/themes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/Logo SMK 6 Malang.png">
 </head>
 <body>
+    <!-- Loading Screen (NEW) -->
+    <div id="loading-screen">
+        <div class="loader-container">
+            <div class="loader-core"></div>
+            <div class="loader-orbit orbit1"></div>
+            <div class="loader-orbit orbit2"></div>
+            <div class="loader-orbit orbit3"></div>
+        </div>
+        <p class="loading-text" data-translate="loadingText">LOADING_</p>
+    </div>
+
     <!-- Floating Navbar -->
     <nav class="floating-navbar">
-        <div class="navbar-links">
-            <a href="#home" class="nav-pill active" data-translate="navHome"><i class="fas fa-home"></i> Home</a>
-            <a href="#about" class="nav-pill" data-translate="navAbout"><i class="fas fa-user"></i> Tentang Saya</a>
-            <a href="#skills" class="nav-pill" data-translate="navSkills"><i class="fas fa-code"></i> Keahlian</a>
-            <a href="#projects" class="nav-pill" data-translate="navProjects"><i class="fas fa-project-diagram"></i> Proyek</a>
-            <a href="#timeline" class="nav-pill" data-translate="navTimeline"><i class="fas fa-history"></i> Timeline</a>
-            <a href="#contact" class="nav-pill" data-translate="navContact"><i class="fas fa-envelope"></i> Kontak</a>
-        </div>
+        <ul class="navbar-links">
+            <li><a href="#home" class="nav-link"><i class="fas fa-house-chimney"></i> <span data-translate="navHome">Home</span></a></li>
+            <li><a href="#about" class="nav-link"><i class="fas fa-address-card"></i> <span data-translate="navAbout">Tentang Saya</span></a></li>
+            <li><a href="#skills" class="nav-link"><i class="fas fa-laptop-code"></i> <span data-translate="navSkills">Keahlian</span></a></li>
+            <li><a href="#projects" class="nav-link"><i class="fas fa-rocket"></i> <span data-translate="navProjects">Proyek</span></a></li>
+            <li><a href="#timeline" class="nav-link"><i class="fas fa-timeline"></i> <span data-translate="navTimeline">Timeline</span></a></li>
+            <li><a href="#contact" class="nav-link"><i class="fas fa-paper-plane"></i> <span data-translate="navContact">Kontak</span></a></li>
+        </ul>
         
         <div class="navbar-actions">
             <button id="language-switcher" class="action-btn" data-translate-title="langBtnTitle" title="Ubah Bahasa">
-                <i class="fas fa-language"></i>
+                <i class="fas fa-globe"></i>
                 <span class="language-text">ID</span>
             </button>
             <button id="theme-switcher" class="action-btn" data-translate-title="themeBtnTitle" title="Ubah Tema">
-                <i class="fas fa-moon"></i>
+                <i class="fas fa-circle-half-stroke"></i>
+                <span data-translate="themeBtnText">Tema</span>
             </button>
             <button id="login-btn" class="action-btn" data-translate-title="loginBtnTitle" title="Login">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-fingerprint"></i>
+                <span data-translate="loginBtnText">Login</span>
             </button>
-            <div id="user-profile" class="user-profile hidden">
-                <img src="images/profile.jpg" alt="Profile" class="profile-pic">
+            <button id="user-profile" class="user-profile hidden" title="Logout">
+                <img src="img/download.jpg" alt="Profile" class="profile-pic">
                 <span class="username" data-translate="username">Guest</span>
-            </div>
+            </button>
         </div>
     </nav>
 
     <!-- Home Section -->
     <section id="home" class="section home-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Muhammad Isaki Prananda</h1>
+        <div class="home-center-content">
+            <img src="img/download.jpg" alt="Muhammad Isaki Prananda" class="profile-image">
+            <h1 class="hero-title" data-text="Muhammad Isaki Prananda">Muhammad Isaki Prananda</h1>
             <h2 class="hero-subtitle"><span data-translate="heroSubtitlePrefix">Pelajar TJKT | </span><span id="typing-text"></span></h2>
             <p class="hero-description" data-translate="heroDescription">
-                Saya adalah pelajar SMK jurusan Teknik Komputer dan Jaringan yang sedang mendalami 
+                Saya adalah pelajar SMK Negeri 6 Malang di jurusan Teknik Komputer dan Jaringan yang sedang mendalami 
                 Cyber Security, Coding, Jaringan, Server, dan teknologi terkini. 
                 Saya bersemangat untuk terus belajar dan mengembangkan keterampilan di dunia IT.
             </p>
             <div class="hero-actions">
-                <a href="#projects" class="btn-primary" data-translate="heroBtnProjects"><i class="fas fa-rocket"></i> Lihat Proyek Saya</a>
                 <a href="#contact" class="btn-secondary" data-translate="heroBtnContact"><i class="fas fa-paper-plane"></i> Hubungi Saya</a>
             </div>
         </div>
-        <div class="hero-image">
-            <div class="tech-stack">
-                <i class="fab fa-python" data-translate-title="techStackPython" title="Python"></i>
-                <i class="fab fa-js" data-translate-title="techStackJS" title="JavaScript"></i>
-                <i class="fas fa-shield-alt" data-translate-title="techStackSecurity" title="Cyber Security"></i>
-                <i class="fas fa-network-wired" data-translate-title="techStackNetwork" title="Networking"></i>
-                <i class="fas fa-server" data-translate-title="techStackServer" title="Server"></i>
-                <i class="fab fa-linux" data-translate-title="techStackLinux" title="Linux"></i>
+        <!-- Indikator scroll down dipindahkan ke sini agar posisinya benar -->
+        <a href="#about" class="scroll-down-indicator" aria-label="Scroll down">
+            <div class="mouse">
+                <div class="wheel"></div>
             </div>
-            <img src="img/download.jpg" alt="Muhammad Isaki Prananda" class="profile-image">
-        </div>
+        </a>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section about-section">
         <h2 class="section-title" data-translate="aboutTitle">Tentang Saya</h2>
-        <div class="about-container">
-            <div class="about-image">
-                <img src="img/download.jpg" alt="Muhammad Isaki Prananda">
-            </div>
-            <div class="about-content">
-                <h3 data-translate="aboutSubTitle">Siapa Saya?</h3>
-                <p data-translate="aboutDescription">
-                    Saya Muhammad Isaki Prananda, seorang pelajar SMK jurusan Teknik Komputer dan Jaringan 
-                    yang penuh semangat dalam mempelajari teknologi informasi. Saya memiliki minat khusus 
-                    di bidang Cyber Security, pemrograman, dan administrasi jaringan.
-                </p>
-                
-                <div class="about-details">
-                    <div class="detail-item">
-                        <i class="fas fa-user-graduate"></i>
-                        <div>
-                            <h4 data-translate="aboutEduTitle">Pendidikan</h4>
-                            <p data-translate="aboutEduDesc">SMK Jurusan Teknik Komputer dan Jaringan</p>
-                        </div>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-laptop-code"></i>
-                        <div>
-                            <h4 data-translate="aboutInterestTitle">Minat</h4>
-                            <p data-translate="aboutInterestDesc">Cyber Security, Pemrograman, Jaringan, Server</p>
-                        </div>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4 data-translate="aboutLocationTitle">Lokasi</h4>
-                            <p data-translate="aboutLocationDesc">Malang, Jawa Timur, Indonesia</p>
-                        </div>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4 data-translate="aboutEmailTitle">Email</h4>
-                            <p>isaki.prananda@example.com</p>
-                        </div>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-bullseye"></i>
-                        <div>
-                            <h4 data-translate="aboutCareerTitle">Tujuan Karir</h4>
-                            <p data-translate="aboutCareerDesc">Cyber Security Specialist, Network Engineer</p>
-                        </div>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-puzzle-piece"></i>
-                        <div>
-                            <h4 data-translate="aboutHobbyTitle">Hobi</h4>
-                            <p data-translate="aboutHobbyDesc">Problem Solving, Belajar Teknologi Baru</p>
-                        </div>
+        <div class="about-container-new">
+            <div class="about-intro">
+                <div class="about-image-new">
+                    <img src="img/download.jpg" alt="Muhammad Isaki Prananda">
+                </div>
+                <div class="about-text">
+                    <h3 data-translate="aboutSubTitle">Siapa Saya?</h3>
+                    <p data-translate="aboutDescription">
+                        Saya Muhammad Isaki Prananda, seorang pelajar sekolah di SMK Negeri 6 Malang di jurusan Teknik Komputer dan Jaringan 
+                        yang penuh semangat dalam mempelajari teknologi informasi. Saya memiliki minat khusus 
+                        di bidang Cyber Security, pemrograman, dan administrasi jaringan.
+                    </p>
+                    <div class="about-buttons">
+                        <a href="#" class="btn-primary" id="download-cv" data-translate="aboutBtnCV"><i class="fas fa-download"></i> Download CV</a>
+                        <a href="#contact" class="btn-secondary" data-translate="heroBtnContact"><i class="fas fa-paper-plane"></i> Hubungi Saya</a>
                     </div>
                 </div>
-                
-                <div class="about-buttons">
-                    <a href="#" class="btn-primary" id="download-cv" data-translate="aboutBtnCV"><i class="fas fa-download"></i> Download CV</a>
-                    <a href="#contact" class="btn-secondary" data-translate="aboutBtnContact"><i class="fas fa-paper-plane"></i> Hubungi Saya</a>
+            </div>
+
+            <div class="about-details-grid">
+                <div class="detail-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <h4 data-translate="aboutEduTitle">Pendidikan</h4>
+                    <p data-translate="aboutEduDesc">SMK Negeri 6 Malang Jurusan Teknik Komputer dan Jaringan</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4 data-translate="aboutInterestTitle">Minat</h4>
+                    <p data-translate="aboutInterestDesc">Cyber Security, Pemrograman, Jaringan, Server</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4 data-translate="aboutLocationTitle">Lokasi</h4>
+                    <p data-translate="aboutLocationDesc">Malang, Jawa Timur, Indonesia</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4 data-translate="aboutEmailTitle">Email</h4>
+                    <p>Arlianto032@gmail.com</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h4 data-translate="aboutCareerTitle">Tujuan Karir</h4>
+                    <p data-translate="aboutCareerDesc">Cyber Security Specialist, Network Engineer</p>
+                </div>
+                <div class="detail-card">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h4 data-translate="aboutHobbyTitle">Hobi</h4>
+                    <p data-translate="aboutHobbyDesc">Problem Solving, Belajar Teknologi Baru</p>
                 </div>
             </div>
         </div>
@@ -429,19 +427,19 @@
         <h2 class="section-title">Hubungi Saya</h2>
         <div class="contact-container">
             <div class="contact-info">
-                <h3>Informasi Kontak</h3>
+                <h3 data-translate="contactInfoTitle">Informasi Kontak</h3>
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
                     <div>
                         <h4>Email</h4>
-                        <p>isaki.prananda@example.com</p>
+                        <p>Arlianto032@gmail.com</p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
                     <div>
                         <h4>Telepon</h4>
-                        <p>+62 812 3456 7890</p>
+                        <p>+62 899 5257 735</p>
                     </div>
                 </div>
                 <div class="info-item">
@@ -461,21 +459,25 @@
             </div>
             
             <div class="contact-form">
-                <h3>Kirim Pesan</h3>
+                <h3 data-translate="contactFormTitle">Kirim Pesan</h3>
                 <form id="contactForm">
                     <div class="form-group">
-                        <input type="text" id="name" placeholder="Nama Anda" required>
+                        <input type="text" id="name" name="name" class="form-input" placeholder=" " required>
+                        <label for="name" class="form-label" data-translate="contactFormName">Nama Anda</label>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" placeholder="Email Anda" required>
+                        <input type="email" id="email" name="email" class="form-input" placeholder=" " required>
+                        <label for="email" class="form-label" data-translate="contactFormEmail">Email Anda</label>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" placeholder="Subjek">
+                        <input type="text" id="subject" name="subject" class="form-input" placeholder=" ">
+                        <label for="subject" class="form-label" data-translate="contactFormSubject">Subjek</label>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" rows="5" placeholder="Pesan Anda" required></textarea>
+                        <textarea id="message" name="message" class="form-input" rows="5" placeholder=" " required></textarea>
+                        <label for="message" class="form-label" data-translate="contactFormMessage">Pesan Anda</label>
                     </div>
-                    <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
+                    <button type="submit" class="btn-primary" data-translate="contactFormSubmit"><i class="fas fa-paper-plane"></i> Kirim Pesan</button>
                 </form>
             </div>
         </div>
@@ -483,72 +485,97 @@
 
     <!-- Login Modal -->
     <div id="login-modal" class="modal hidden">
-        <div class="modal-content auth-card">
-            <span class="close-modal">&times;</span>
-            <h2>Login</h2>
-            <form id="login-form">
-                <div class="form-group">
-                    <label for="login-email">Email</label>
-                    <input type="email" id="login-email" required>
+        <div class="modal-content">
+            <div class="auth-card">
+                <span class="close-modal">&times;</span>
+                <h2>Login</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="login-email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="login-password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group-agree">
+                        <input type="checkbox" id="login-agree-terms" required>
+                        <label for="login-agree-terms" data-translate="agreeTerms">
+                            Saya setuju dengan <a href="syarat-ketentuan.html" target="_blank">Syarat & Ketentuan</a> dan <a href="kebijakan-privasi.html" target="_blank">Kebijakan Privasi</a>.
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-primary">Login</button>
+                    <div class="auth-links">
+                        <a href="#" id="show-reset">Lupa Password?</a>
+                        <span>Belum punya akun? <a href="#" id="show-register">Daftar</a></span>
+                    </div>
+                </form>
+                <div class="social-login-divider">
+                    <span>ATAU LANJUTKAN DENGAN</span>
                 </div>
-                <div class="form-group">
-                    <label for="login-password">Password</label>
-                    <input type="password" id="login-password" required>
+                <div class="social-login-buttons">
+                    <button class="social-btn google"><i class="fab fa-google"></i> Google</button>
+                    <button class="social-btn github"><i class="fab fa-github"></i> GitHub</button>
                 </div>
-                <button type="submit" class="btn-primary">Login</button>
-                <div class="auth-links">
-                    <a href="#register-modal" id="show-register">Buat Akun Baru</a>
-                    <a href="#reset-modal" id="show-reset">Lupa Password?</a>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 
     <!-- Register Modal -->
     <div id="register-modal" class="modal hidden">
-        <div class="modal-content auth-card">
-            <span class="close-modal">&times;</span>
-            <h2>Daftar Akun</h2>
-            <form id="register-form">
-                <div class="form-group">
-                    <label for="register-name">Nama Lengkap</label>
-                    <input type="text" id="register-name" required>
-                </div>
-                <div class="form-group">
-                    <label for="register-email">Email</label>
-                    <input type="email" id="register-email" required>
-                </div>
-                <div class="form-group">
-                    <label for="register-password">Password</label>
-                    <input type="password" id="register-password" required>
-                </div>
-                <div class="form-group">
-                    <label for="register-confirm">Konfirmasi Password</label>
-                    <input type="password" id="register-confirm" required>
-                </div>
-                <button type="submit" class="btn-primary">Daftar</button>
-                <div class="auth-links">
-                    <a href="#login-modal" id="show-login">Sudah punya akun? Login</a>
-                </div>
-            </form>
+        <div class="modal-content">
+            <div class="auth-card">
+                <span class="close-modal">&times;</span>
+                <h2>Daftar Akun</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="register-name" placeholder="Nama Lengkap" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="register-email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="register-password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-check-circle"></i>
+                        <input type="password" id="register-confirm" placeholder="Konfirmasi Password" required>
+                    </div>
+                    <div class="form-group-agree">
+                        <input type="checkbox" id="register-agree-terms" required>
+                        <label for="register-agree-terms" data-translate="agreeTerms">
+                            Saya setuju dengan <a href="syarat-ketentuan.html" target="_blank">Syarat & Ketentuan</a> dan <a href="kebijakan-privasi.html" target="_blank">Kebijakan Privasi</a>.
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-primary">Daftar</button>
+                    <div class="auth-links">
+                        <span>Sudah punya akun? <a href="#" id="show-login">Login</a></span>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
     <!-- Reset Password Modal -->
     <div id="reset-modal" class="modal hidden">
-        <div class="modal-content auth-card">
-            <span class="close-modal">&times;</span>
-            <h2>Reset Password</h2>
-            <form id="reset-form">
-                <div class="form-group">
-                    <label for="reset-email">Email</label>
-                    <input type="email" id="reset-email" required>
-                </div>
-                <button type="submit" class="btn-primary">Kirim Link Reset</button>
-                <div class="auth-links">
-                    <a href="#login-modal" id="show-login-from-reset">Kembali ke Login</a>
-                </div>
-            </form>
+        <div class="modal-content">
+            <div class="auth-card">
+                <span class="close-modal">&times;</span>
+                <h2>Reset Password</h2>
+                <form id="reset-form">
+                    <div class="form-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="reset-email" placeholder="Masukkan Email Anda" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Kirim Link Reset</button>
+                    <div class="auth-links">
+                        <a href="#" id="show-login-from-reset">Kembali ke Login</a>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -572,17 +599,12 @@
         <i class="fas fa-robot"></i>
     </button>
 
-    <!-- Back to Top Button -->
-    <a href="#home" class="back-to-top" title="Kembali ke Atas">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
                 <h3>Tentang Saya</h3>
-                <p>Muhammad Isaki Prananda adalah pelajar SMK jurusan Teknik Komputer dan Jaringan yang bersemangat dalam mempelajari Cyber Security, Pemrograman, dan Jaringan Komputer.</p>
+                <p>Muhammad Isaki Prananda adalah pelajar SMK Negeri 6 Malang di jurusan Teknik Komputer dan Jaringan yang bersemangat dalam mempelajari Cyber Security, Pemrograman, dan Jaringan Komputer.</p>
                 <div class="footer-social">
                     <a href="#"><i class="fab fa-github"></i></a>
                     <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -607,8 +629,8 @@
                 <h3>Informasi Kontak</h3>
                 <ul class="contact-list">
                     <li><i class="fas fa-map-marker-alt"></i><span>Malang, Jawa Timur, Indonesia</span></li>
-                    <li><i class="fas fa-envelope"></i><span>isaki.prananda@example.com</span></li>
-                    <li><i class="fas fa-phone"></i><span>+62 812 3456 7890</span></li>
+                    <li><i class="fas fa-envelope"></i><span>Arlianto032@gmail.com</span></li>
+                    <li><i class="fas fa-phone"></i><span>+62 899 5257 735</span></li>
                     <li class="time-divider"></li>
                     <li class="time-zone-item">
                         <i class="fas fa-clock"></i>
@@ -657,10 +679,12 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/translations.js"></script> <!-- Tambahkan baris ini -->
     <script src="js/theme-switcher.js"></script>
     <script src="js/language-switcher.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/typing-effect.js"></script>
+    <script src="js/loader.js"></script> <!-- Script for loading screen -->
     <script src="js/chatbot.js"></script>
 </body>
 </html>

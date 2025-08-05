@@ -12,16 +12,24 @@
     --border-color: #d1d9e6;
     --card-bg: #ffffff;
     --primary-color-transparent: rgba(0, 123, 255, 0.1);
+    --primary-rgb: 0, 123, 255;
+    --navbar-bg-rgb: 255, 255, 255;
+    --navbar-border-rgb: 51, 51, 51;
 }
 
 /* Light Theme Adjustments */
 [data-theme='light'] body {
-    animation: none; /* Turn off background gradient animation for light theme */
+    animation: none; /* Turn off particle animation for light theme */
+    /* New subtle grid background for light theme */
+    background-image: 
+        linear-gradient(var(--border-color) 1px, transparent 1px), 
+        linear-gradient(to right, var(--border-color) 1px, var(--dark-bg) 1px);
+    background-size: 30px 30px;
 }
 
 [data-theme='light'] body::before, 
 [data-theme='light'] body::after {
-    opacity: 0.1; /* Make stars very faint on light bg */
+    display: none; /* Remove old star pseudo-elements */
 }
 
 [data-theme='light'] h1, 
@@ -34,29 +42,6 @@
     text-shadow: none;
 }
 
-[data-theme='light'] .floating-navbar {
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-[data-theme='light'] .navbar-brand a {
-    color: #1a1a1a;
-}
-[data-theme='light'] .navbar-brand a:hover {
-    color: var(--primary-color);
-}
-
-[data-theme='light'] .nav-pill {
-    color: var(--text-color-darker);
-}
-[data-theme='light'] .nav-pill:hover {
-    color: var(--primary-color);
-    background: var(--primary-color-transparent);
-}
-[data-theme='light'] .nav-pill.active {
-    color: white;
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-}
 [data-theme='light'] .action-btn {
     color: var(--text-color-darker);
 }
@@ -65,11 +50,21 @@
     text-shadow: none;
 }
 [data-theme='light'] .btn-primary {
-    color: white;
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+    box-shadow: 0 6px 20px -5px rgba(var(--primary-rgb), 0.4),
+                inset 0 -2px 5px rgba(0,0,0,0.1);
 }
 [data-theme='light'] .btn-primary:hover {
+    transform: translateY(2px) scale(0.98);
+    box-shadow: 0 2px 10px -2px rgba(var(--primary-rgb), 0.3),
+                inset 0 2px 8px rgba(0,0,0,0.2);
+}
+
+[data-theme='light'] .btn-secondary:hover {
     color: white;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px -5px rgba(var(--primary-rgb), 0.5);
 }
 
 [data-theme='light'] .profile-image {
@@ -90,7 +85,6 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 [data-theme='light'] .detail-item,
-[data-theme='light'] .skills-category,
 [data-theme='light'] .project-card,
 [data-theme='light'] .timeline-content,
 [data-theme='light'] .contact-container,
@@ -99,18 +93,41 @@
 [data-theme='light'] .footer {
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
 }
+
+/* Specific bright style for skill cards in light theme */
+[data-theme='light'] .skills-category {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] .skills-category:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), 0 0 15px rgba(var(--primary-rgb), 0.2);
+}
 [data-theme='light'] .timeline-item:hover::after {
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
-[data-theme='light'] .form-group input, 
-[data-theme='light'] .form-group textarea {
-    background-color: #f8f9fa;
+[data-theme='light'] .timeline-content::before {
+    background-color: var(--border-color);
 }
-[data-theme='light'] .form-group input:focus, 
-[data-theme='light'] .form-group textarea:focus {
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+[data-theme='light'] .timeline-date {
+    background-color: var(--primary-color-transparent);
+    color: var(--primary-color);
 }
 
+[data-theme='light'] .form-label {
+    color: #6c757d;
+}
+
+[data-theme='light'] .form-input {
+    background-color: transparent;
+    border-bottom: 2px solid #ced4da;
+    color: var(--text-color);
+}
+
+[data-theme='light'] .form-input:focus + .form-label {
+    color: var(--primary-color);
+}
 [data-theme='light'] .chatbot-toggle {
     color: white;
     box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
